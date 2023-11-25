@@ -32,7 +32,10 @@ class process {
 	public int getBurstTime() {
 		return burstTime;
 	}
-
+	 
+	    public int compareTo(process other) {
+	        return Integer.compare(this.burstTime, other.burstTime);
+	    }
 	public int getWaitingTime() {
 		return waitingTime;
 	}

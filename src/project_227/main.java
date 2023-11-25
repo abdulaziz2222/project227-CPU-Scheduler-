@@ -17,14 +17,14 @@ public class main {
 			Thread readFileThread = new Thread(new Runnable() { 
 				@Override
 				public void run() {
-					PR.readTextFile();
+					PR.readTextFile(); 
 
 				}
 			});
 
 			 Scanner scanner = new Scanner(System.in);
 				System.out.print(
-						"CHOOSE ONE OF THE FOLLOWING:\n1- First come first serve(FCFS)\n2- Round-Robin with time slice = 3 (RR-3)\n3- Round-Robin with time slice = 5 (RR-5) ==> ");
+						"CHOOSE ONE OF THE FOLLOWING:\n1- First come first serve(FCFS)\n2- Shortest-Job-First (SJF)\n3- Round-Robin with time slice = 3 (RR-3)\n4- Round-Robin with time slice = 5 (RR-5) ==> ");
 				try {
 					int algorithmChoice = scanner.nextInt();
 
@@ -42,11 +42,18 @@ public class main {
 							algorithmThread = new Thread(new Runnable() {
 								@Override
 								public void run() {
+									algo.SJF();
+								}	});
+							break;
+						case 3:
+							algorithmThread = new Thread(new Runnable() {
+								@Override
+								public void run() {
 									algo.RR(3);
 								}
 							});
 							break;
-						case 3:
+						case 4:
 							algorithmThread = new Thread(new Runnable() {
 								@Override
 								public void run() {
