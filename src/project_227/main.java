@@ -62,7 +62,7 @@ public class main {
 							});
 							break;
 						default:
-							System.out.println("Invalid choice. Please choose 1, 2, or 3.");
+							System.out.println("Invalid choice. Please choose 1, 2, 3, or 4.");
 							return;
 					}
 

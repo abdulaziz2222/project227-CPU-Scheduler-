@@ -155,10 +155,8 @@ public class Algorithms {
 	public void sortProcessQueue(Queue<process> processQueue) {
         // Convert the queue to a list for sorting
         LinkedList<process> processList = new LinkedList<>(processQueue);
-
         // Sort the list of processes
         processList.sort(process::compareTo);
-
         // Clear the original queue and add the sorted processes back
         processQueue.clear();
         processQueue.addAll(processList);
